@@ -13,6 +13,9 @@
 		4D511AF41F102A48009ACB7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D511AF31F102A48009ACB7F /* Assets.xcassets */; };
 		4D511AF71F102A48009ACB7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D511AF51F102A48009ACB7F /* LaunchScreen.storyboard */; };
 		4D511B021F102A48009ACB7F /* CopTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D511B011F102A48009ACB7F /* CopTrackerUITests.swift */; };
+		4D511B0E1F102B23009ACB7F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D511B0D1F102B23009ACB7F /* MapKit.framework */; };
+		4D511B101F102E57009ACB7F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D511B0F1F102E57009ACB7F /* LocationManager.swift */; };
+		4D511B121F1041BC009ACB7F /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D511B111F1041BC009ACB7F /* button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		4D511AFD1F102A48009ACB7F /* CopTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D511B011F102A48009ACB7F /* CopTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopTrackerUITests.swift; sourceTree = "<group>"; };
 		4D511B031F102A48009ACB7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D511B0D1F102B23009ACB7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D511B0F1F102E57009ACB7F /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4D511B111F1041BC009ACB7F /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D511B0E1F102B23009ACB7F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,7 @@
 				4D511AEB1F102A48009ACB7F /* CopTracker */,
 				4D511B001F102A48009ACB7F /* CopTrackerUITests */,
 				4D511AEA1F102A48009ACB7F /* Products */,
+				4D511B0C1F102B23009ACB7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,8 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				4D511AEC1F102A48009ACB7F /* AppDelegate.swift */,
+				4D511B0F1F102E57009ACB7F /* LocationManager.swift */,
 				4D511AEE1F102A48009ACB7F /* ViewController.swift */,
 				4D511AF01F102A48009ACB7F /* Main.storyboard */,
+				4D511B111F1041BC009ACB7F /* button.png */,
 				4D511AF31F102A48009ACB7F /* Assets.xcassets */,
 				4D511AF51F102A48009ACB7F /* LaunchScreen.storyboard */,
 				4D511AF81F102A48009ACB7F /* Info.plist */,
@@ -94,6 +104,14 @@
 				4D511B031F102A48009ACB7F /* Info.plist */,
 			);
 			path = CopTrackerUITests;
+			sourceTree = "<group>";
+		};
+		4D511B0C1F102B23009ACB7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D511B0D1F102B23009ACB7F /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D511AF71F102A48009ACB7F /* LaunchScreen.storyboard in Resources */,
+				4D511B121F1041BC009ACB7F /* button.png in Resources */,
 				4D511AF41F102A48009ACB7F /* Assets.xcassets in Resources */,
 				4D511AF21F102A48009ACB7F /* Main.storyboard in Resources */,
 			);
@@ -203,6 +222,7 @@
 			files = (
 				4D511AEF1F102A48009ACB7F /* ViewController.swift in Sources */,
 				4D511AED1F102A48009ACB7F /* AppDelegate.swift in Sources */,
+				4D511B101F102E57009ACB7F /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

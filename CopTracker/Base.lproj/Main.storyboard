@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CopTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yRb-dX-9Kf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="312"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="312" id="Lap-Ir-auf"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIC-c5-txQ">
+                                <rect key="frame" x="119" y="319" width="138" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qX-b2-iqF">
+                                <rect key="frame" x="128" y="404.5" width="118" height="52.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="KIO-nw-ZQ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="SEE A COP?" backgroundImage="button.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SH2-rP-MdA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC9-k5-VES">
+                                <rect key="frame" x="164.5" y="356" width="48.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1qX-b2-iqF" secondAttribute="bottom" constant="210" id="05b-ql-Us0"/>
+                            <constraint firstItem="yRb-dX-9Kf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="P27-np-Cmy"/>
+                            <constraint firstItem="CC9-k5-VES" firstAttribute="centerX" secondItem="iIC-c5-txQ" secondAttribute="centerX" id="Rou-Hl-RFX"/>
+                            <constraint firstItem="iIC-c5-txQ" firstAttribute="centerX" secondItem="yRb-dX-9Kf" secondAttribute="centerX" id="apv-En-itU"/>
+                            <constraint firstItem="yRb-dX-9Kf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dAc-lu-3b9"/>
+                            <constraint firstItem="1qX-b2-iqF" firstAttribute="top" secondItem="CC9-k5-VES" secondAttribute="bottom" constant="34" id="gdX-eW-1na"/>
+                            <constraint firstItem="yRb-dX-9Kf" firstAttribute="centerX" secondItem="1qX-b2-iqF" secondAttribute="centerX" id="obO-lm-j1O"/>
+                            <constraint firstItem="iIC-c5-txQ" firstAttribute="top" secondItem="yRb-dX-9Kf" secondAttribute="bottom" constant="7" id="qFg-a6-t7i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yRb-dX-9Kf" secondAttribute="trailing" constant="-16" id="t7Y-EB-53I"/>
+                            <constraint firstItem="CC9-k5-VES" firstAttribute="top" secondItem="iIC-c5-txQ" secondAttribute="bottom" constant="8" id="zXN-WR-wVP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationInfo" destination="CC9-k5-VES" id="eAr-dM-dOs"/>
+                        <outlet property="mapView" destination="yRb-dX-9Kf" id="oif-xb-ERv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button.png" width="600" height="192"/>
+    </resources>
 </document>
